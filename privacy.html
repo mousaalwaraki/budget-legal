@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Budget</title>
+<style>
+  :root {
+    --ground: #FAF9F7; --surface: #FFFFFF; --ink: #1A1714;
+    --muted: rgba(60,50,40,0.62); --hairline: rgba(60,50,40,0.13); --accent: #8A5A2B;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #14120F; --surface: #1E1B17; --ink: #F5F2EE;
+      --muted: rgba(245,242,238,0.62); --hairline: rgba(245,242,238,0.13); --accent: #C9955C;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 34px; line-height: 1.15; letter-spacing: -1px; margin: 0 0 6px; }
+  h2 { font-size: 20px; letter-spacing: -0.4px; margin: 40px 0 10px; }
+  h3 { font-size: 16px; margin: 26px 0 6px; }
+  p, li { color: var(--ink); }
+  .meta { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+  .lede { color: var(--muted); font-size: 18px; margin: 14px 0 0; }
+  a { color: var(--accent); }
+  ul { padding-left: 22px; }
+  li { margin: 7px 0; }
+  hr { border: 0; border-top: 1px solid var(--hairline); margin: 44px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.7px; color: var(--muted); font-weight: 600; }
+  .card { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 4px 16px; margin: 16px 0; }
+  .card table { margin: 0; }
+  .card tr:last-child td { border-bottom: 0; }
+  footer { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 14px; }
+  @media (max-width: 520px) { main { padding: 40px 18px 72px; } h1 { font-size: 28px; } }
+</style>
+</head>
+<body><main>
+
+<h1>Privacy Policy</h1>
+<p class="meta">Budget · last updated 18 September 2026</p>
+<p class="lede">Budget is a personal finance tracker. It holds some of the most sensitive
+information you have, and it is built so that as little of it as possible leaves your phone.
+This page says exactly what does.</p>
+
+<p>Budget is operated by [YOUR LEGAL OR TRADING NAME] ("we"). If anything here is unclear, write to
+<a href="mailto:[YOUR CONTACT EMAIL]">[YOUR CONTACT EMAIL]</a>.</p>
+
+<h2>What we hold</h2>
+<ul>
+  <li><strong>Your email address</strong>, because that is how you sign in.</li>
+  <li><strong>A display name</strong>, if you give one, so the people in your household can tell
+      whose spending is whose.</li>
+  <li><strong>The financial records you create or import</strong>: accounts and balances,
+      transactions with their amounts, dates and merchant names, categories, budgets,
+      savings pots, and any investments you enter.</li>
+</ul>
+<p>That is the whole list. We do not collect your location, your contacts, your device
+identifiers or your browsing. There is no analytics or crash-reporting SDK in the app,
+no advertising, and no tracking of any kind.</p>
+
+<h2>We never connect to your bank</h2>
+<p>Budget has no banking integration and never asks for banking credentials. Transactions
+reach the app in one of three ways, all of which you start yourself: you type them in, you
+set up an Apple Shortcuts automation that hands the app a notification your bank already
+sent to your phone, or you import a screenshot. Nobody — including us — can use Budget
+to reach your bank account.</p>
+
+<h2>Where it is kept</h2>
+<p>Everything lives on your device first, so the app works with no signal. When you are
+signed in, it is also stored on servers operated by Supabase so your phones stay in step.
+Access is enforced per household at the database level: a request carrying someone else's
+account can read none of your rows.</p>
+
+<h2>Who else processes it</h2>
+<p>These are the only third parties involved, and what each one receives:</p>
+<div class="card">
+<table>
+  <tr><th>Who</th><th>What they get</th><th>When</th></tr>
+  <tr><td>Supabase</td><td>Your email address and all of your financial records</td><td>Whenever you are signed in and syncing</td></tr>
+  <tr><td>Google (Gemini API)</td><td>The screenshot you chose, and nothing else</td><td>Only when you use screenshot import</td></tr>
+  <tr><td>Apple / Google</td><td>Confirmation of who you are</td><td>Only if you sign in with Apple or Google</td></tr>
+  <tr><td>Yahoo Finance</td><td>The ticker symbol you are tracking</td><td>When investment prices refresh</td></tr>
+  <tr><td>gold-api.com</td><td>Nothing about you — just a price request</td><td>When gold prices refresh</td></tr>
+  <tr><td>open.er-api.com</td><td>Nothing about you — just a rate request</td><td>When exchange rates refresh</td></tr>
+</table>
+</div>
+<p>Your transaction history is never sent to any of them except Supabase. Screenshot import
+is the one feature that sends an image off the device, it only runs when you pick an image,
+and the image is passed through for text extraction rather than stored by us.</p>
+
+<h2>Sharing with a household</h2>
+<p>A household is the unit of access. Anyone you invite into yours can see and change all of
+its accounts, balances, transactions and budgets, including entries made before they joined.
+Only invite someone you would show your bank statement to. You can turn on separate personal
+spending to keep some categories to yourself, but treat that as tidiness rather than secrecy.</p>
+
+<h2>Deleting your data</h2>
+<p>Settings → Account → Delete account removes your account immediately. If you are the last
+member of your household, the household and everything in it — accounts, transactions,
+budgets, pots — is deleted with it and cannot be recovered. If others remain, their copy of
+the household data stays, since it is theirs too. The copy held on your own phone is removed
+when you delete the app.</p>
+
+<h2>Keeping it</h2>
+<p>We keep your records for as long as your account exists, because the app is useless without
+your history. We do not keep backups of deleted households beyond what the hosting provider
+retains for disaster recovery.</p>
+
+<h2>Legal basis and your rights</h2>
+<p>We process this information to provide the service you asked for. Depending on where you
+live you may have the right to access, correct, export or erase it, and to object to its
+processing. The app gives you all of this directly: everything we hold is on your screen, you
+can edit any of it, and account deletion is one tap. For anything the app does not cover,
+write to <a href="mailto:[YOUR CONTACT EMAIL]">[YOUR CONTACT EMAIL]</a>.</p>
+
+<h2>Children</h2>
+<p>Budget is not intended for children under 13, and we do not knowingly create accounts for
+them.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes in a way that affects what we collect or who receives it, we will
+update the date at the top and say so in the app before the change takes effect.</p>
+
+<footer>
+  <a href="./terms.html">Terms of Use</a> · <a href="./privacy.html">Privacy Policy</a>
+</footer>
+</main></body>
+</html>
