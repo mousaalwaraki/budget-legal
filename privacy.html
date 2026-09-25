@@ -45,7 +45,7 @@
 <body><main>
 
 <h1>Privacy Policy</h1>
-<p class="meta">Baqi · last updated 18 September 2026</p>
+<p class="meta">Baqi · last updated 26 September 2026</p>
 <p class="lede">Baqi is a personal finance tracker. It holds some of the most sensitive
 information you have, and it is built so that as little of it as possible leaves your phone.
 This page says exactly what does.</p>
@@ -61,10 +61,20 @@ This page says exactly what does.</p>
   <li><strong>The financial records you create or import</strong>: accounts and balances,
       transactions with their amounts, dates and merchant names, categories, budgets,
       savings pots, and any investments you enter.</li>
+  <li><strong>Your Baqi Pro subscription</strong>, if you have one: the Apple-signed record of the
+      purchase (product, dates, renewal state and price), checked on our server so the
+      subscription is tied to your account. We never see your card or Apple Account details.</li>
+  <li><strong>How the app is used</strong>: which screens are opened and which features are used,
+      with the app version, iOS version, device model and language. These events never contain
+      amounts, balances, merchants, notes, or the names of your accounts or categories. They
+      are linked to your account when you are signed in, kept in full for 90 days and as daily
+      totals after that, and used only to decide what to improve. Turn them off at any time in
+      Settings → Share usage analytics.</li>
 </ul>
-<p>That is the whole list. We do not collect your location, your contacts, your device
-identifiers or your browsing. There is no analytics or crash-reporting SDK in the app,
-no advertising, and no tracking of any kind.</p>
+<p>That is the whole list. We do not collect your location, your contacts, advertising
+identifiers or your browsing. Usage events are our own and go only to our own server: there
+is no third-party analytics or crash-reporting SDK in the app, no advertising, and no
+tracking across other companies' apps or websites.</p>
 
 <h2>We never connect to your bank</h2>
 <p>Baqi has no banking integration and never asks for banking credentials. Transactions
@@ -87,6 +97,7 @@ account can read none of your rows.</p>
   <tr><td>Supabase</td><td>Your email address and all of your financial records</td><td>Whenever you are signed in and syncing</td></tr>
   <tr><td>Google (Gemini API)</td><td>The screenshot you chose, and nothing else</td><td>Only when you use screenshot import</td></tr>
   <tr><td>Apple / Google</td><td>Confirmation of who you are</td><td>Only if you sign in with Apple or Google</td></tr>
+  <tr><td>Apple</td><td>Sends us the signed record of your Baqi Pro purchase and its renewals, refunds and cancellations</td><td>Only if you subscribe</td></tr>
   <tr><td>Yahoo Finance</td><td>The ticker symbol you are tracking</td><td>When investment prices refresh</td></tr>
   <tr><td>gold-api.com</td><td>Nothing about you — just a price request</td><td>When gold prices refresh</td></tr>
   <tr><td>open.er-api.com</td><td>Nothing about you — just a rate request</td><td>When exchange rates refresh</td></tr>
